@@ -1,72 +1,204 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8" />
-<title>Add custom icons with Markers</title>
-<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
-<script src="https://unpkg.com/maplibre-gl@2.1.1/dist/maplibre-gl.js"></script>
-<link href="https://unpkg.com/maplibre-gl@2.1.1/dist/maplibre-gl.css" rel="stylesheet" />
-<style>
-	body { margin: 0; padding: 0; }
-	#map { position: absolute; top: 0; bottom: 0; width: 100%; }
-</style>
-</head>
-<body>
-<div id="map"></div>
- 
-<script>
-
-var map = new maplibregl.Map({
-container: 'map',
-style:'https://geoserveis.icgc.cat/contextmaps/icgc.json',
-<!-- center: [3.3809645184954293 , 50.61256730087608 ], -->
-<!-- center: [4.64086758, 50.90013625], -->
-center :[3.3813199283785726 , 50.61255600584882], // tournai
-zoom: 17
-});
-
- // Ajout des données
-      
-map.on('load', function () {   
-   //BATIMENTS 
-map.addSource('tournai', {
-        type: 'geojson',
-        data: 'https://github.com/juliendevleeschauwer/map/blob/main/tournai.geojson'
-    });
- 
-map.addLayer({
-    'id': 'tournai',
-    'type': 'fill',
-    'source': 'tournai',
-	'paint': 
-	{'fill-color': '#A9A9A9'}
-    });
-   
-});
-  
-
-<!-- map.on('load', function() { -->
-            <!-- map.addSource("aerial-source", { -->
-                <!-- "type": "image", -->
-                <!-- "url": "https://raw.githubusercontent.com/maptiler/maplibre-gl-js-samples/main/raster-layer/img/aerial_wgs85.png", -->
-                <!-- "coordinates": [ -->
-                    <!-- [4.639663696289062, 50.900867668253724], -->
-                    <!-- [4.642066955566406, 50.900867668253724], -->
-                    <!-- [4.642066955566406, 50.89935199434383], -->
-                    <!-- [4.639663696289062, 50.89935199434383] -->
-                <!-- ] -->
-            <!-- }); -->
-
-            <!-- map.addLayer({ -->
-                <!-- "id": "overlay", -->
-                <!-- "source": "aerial-source", -->
-                <!-- "type": "raster", -->
-                <!-- "paint": { -->
-                    <!-- "raster-opacity": 0.85 -->
-                <!-- } -->
-            <!-- }); -->
-        <!-- });         -->
-</script>
- 
-</body>
-</html>
+{
+  "type": "FeatureCollection",
+  "features": [
+  	{
+      "type": "image",
+	  "url" : "https://sufx.cdy.be/assets/maison_7/3.png",
+      "properties": {
+        "ID": 11
+      },
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            [
+              3.3808520436286926,
+              50.61198529729094
+            ],
+            [
+              3.381071984767914,
+              50.61198529729094
+            ],
+            [
+              3.381071984767914,
+              50.61213252406619
+            ],
+            [
+              3.3808520436286926,
+              50.61213252406619
+            ],
+            [
+              3.3808520436286926,
+              50.61198529729094
+            ]
+          ]
+        ]
+      }
+    },
+	{
+      "type": "Feature",
+      "properties": {
+        "ID": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.3808520436286926,
+              50.61198529729094
+            ],
+            [
+              3.381071984767914,
+              50.61198529729094
+            ],
+            [
+              3.381071984767914,
+              50.61213252406619
+            ],
+            [
+              3.3808520436286926,
+              50.61213252406619
+            ],
+            [
+              3.3808520436286926,
+              50.61198529729094
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 2
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.3811350166797633,
+              50.61206359135595
+            ],
+            [
+              3.381321430206299,
+              50.61206359135595
+            ],
+            [
+              3.381321430206299,
+              50.612199754636904
+            ],
+            [
+              3.3811350166797633,
+              50.612199754636904
+            ],
+            [
+              3.3811350166797633,
+              50.61206359135595
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 3
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.3809606730937953,
+              50.6127333406958
+            ],
+            [
+              3.3810746669769287,
+              50.6127333406958
+            ],
+            [
+              3.3810746669769287,
+              50.61280737847459
+            ],
+            [
+              3.3809606730937953,
+              50.61280737847459
+            ],
+            [
+              3.3809606730937953,
+              50.6127333406958
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 4
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.3811189234256744,
+              50.6125282469299
+            ],
+            [
+              3.381222188472748,
+              50.6125282469299
+            ],
+            [
+              3.381222188472748,
+              50.61260654009129
+            ],
+            [
+              3.3811189234256744,
+              50.61260654009129
+            ],
+            [
+              3.3811189234256744,
+              50.6125282469299
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 5
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.381372392177582,
+              50.612535906049274
+            ],
+            [
+              3.3814863860607147,
+              50.612535906049274
+            ],
+            [
+              3.3814863860607147,
+              50.612604838067426
+            ],
+            [
+              3.381372392177582,
+              50.612604838067426
+            ],
+            [
+              3.381372392177582,
+              50.612535906049274
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
